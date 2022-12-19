@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav a{
+        color: $primary_color;
+        font-size: $text_size;
+        font-family: $text_police;
+        padding-right: 10px;
+    }
+}
