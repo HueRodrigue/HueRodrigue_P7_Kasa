@@ -1,19 +1,19 @@
 import React from 'react'
 import JsonData from '../../data/logements.json'
+import { Link } from "react-router-dom";
 function JsonDataDisplay(){
 	const DisplayData=JsonData.map(
 		(logement)=>{
 			return(
-                <a href='#' className='clickable-card' key={logement.id} id= {logement.id}>
-                    <article className='logement-card'>
-                        <figure>
-                            <img src={logement.pictures[0]} alt={logement.title}/>
-                            <figcaption>
-                                <h2>{logement.title}</h2>
-                            </figcaption>
-                        </figure>
-                    </article>
-                </a>
+				<Link className="clickable-card" to={"/product/" + logement.id}>
+                	<figure>
+                	<img src={logement.cover} alt="" className="card-img" />
+					<figcaption>
+					<h2 className="card-title">{logement.title}</h2>
+					</figcaption>
+                	
+					</figure>
+            	</Link>
 			)
 		}
 	)
