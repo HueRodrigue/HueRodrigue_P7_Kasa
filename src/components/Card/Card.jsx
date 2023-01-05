@@ -5,14 +5,13 @@ function JsonDataDisplay(){
 	const DisplayData=JsonData.map(
 		(logement)=>{
 			return(
-				<Link className="clickable-card" to={"/product/" + logement.id}>
-                	<figure>
-                	<img src={logement.cover} alt="" className="card-img" />
+				<Link className="clickable-card" to={"/product/" + logement.id} key={logement.id} >
+				<figure>
+					<img src={logement.cover} alt="" className="card-img" />
 					<figcaption>
-					<h2 className="card-title">{logement.title}</h2>
+						<h2 className="card-title">{logement.title}</h2>
 					</figcaption>
-                	
-					</figure>
+				</figure>
             	</Link>
 			)
 		}

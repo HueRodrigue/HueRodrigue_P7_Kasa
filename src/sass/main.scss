@@ -1,7 +1,9 @@
 @import "./utils/_variables.scss";
 @import "./utils/_mixins.scss";
 @import "./utils/_placeholders.scss";
+@import "./components/_Banner.scss";
+@import "./components/_Card.scss";
+@import "./components/_Collapse.scss";
 @import "./layouts/_Footer_layout.scss";
 @import "./layouts/_Header_layout.scss";
-@import "./layouts/_Banner_layout.scss";
-@import "./layouts/_Card_layout.scss";
+@import "./layouts/_Error_layout.scss";

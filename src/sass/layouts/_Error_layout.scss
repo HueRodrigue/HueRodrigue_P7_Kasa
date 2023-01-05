@@ -1,0 +1,25 @@
+.Error-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &--title{
+        font-weight: 700;
+        font-size: 288px;
+        color: $primary_color;
+        font-family: $text_police;
+    }
+    &--description{
+        font-weight: 500;
+        font-size: 36px;
+        color: $primary_color;
+        font-family: $text_police;
+    }
+    &--link{
+        font-weight: 500;
+        font-size: 18px;
+        color: $primary_color;
+        font-family: $text_police;
+        margin-bottom: 50px;
+    }
+}
