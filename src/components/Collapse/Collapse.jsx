@@ -4,6 +4,8 @@ import {IoIosArrowDown} from "react-icons/io";
 
 
 function Collapsible({title,content}) {
+    console.log(content)
+    
     const [open, setOPen] = useState(false);
     const toggle = e => {
         setOPen(!open);
@@ -24,7 +26,7 @@ function Collapsible({title,content}) {
         </button>
         {open && (
         <div className="about__dropdowns__items--description">
-            <h4>{content}</h4>
+            {content}
         </div>
         )}
         </div>
