@@ -1,0 +1,16 @@
+.Profile{
+    display: flex;
+    align-items: center;
+    
+    &-text p {
+        font-family: $text_police;
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary_color;
+    }
+    &-picture , img{
+        width: 64px;
+        height: 64px;
+        border-radius:50%;
+    }
+}

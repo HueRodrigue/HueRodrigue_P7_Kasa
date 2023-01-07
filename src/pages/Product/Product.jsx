@@ -2,6 +2,10 @@ import React, { Component }  from 'react';
 import { useParams } from 'react-router';
 import JsonData from '../../data/logements.json'
 import Slider from '../../components/Slider/Slider.jsx'
+import Host from '../../components/Host/Host.jsx'
+import Title from '../../components/Title/Title.jsx'
+import Rating from '../../components/Rating/Rating.jsx'
+import Tags from '../../components/Tags/Tags.jsx'
 import Collapsible from '../../components/Collapse/Collapse.jsx';
 
 
@@ -17,14 +21,29 @@ const equipementsProduct = Product?.equipments.map((equipment, index) => {
   return <li key={index}>{equipment}</li>
 })
 
+const tagsProduct = Product?.tags.map((tags, index) => {
+  return <li className='tags-item' key={index}>{tags}</li>
+})
+
+
+ const split_string = Product.host.name.split(" ");
+
   return (
     <div className='product-page-container'>
       <div className='slider-container'>
         <Slider slides={Product.pictures}/>
       </div>
-      <div className="about__dropdowns">
-      <Collapsible title="Description" content={Product.description} />
-      <Collapsible title="Equipements" content={equipementsProduct} />
+      <div className='title_profile_container'>
+        <Title title={Product.title} city = {Product.location}/>
+        <Host name = {split_string[0]} username = {split_string[1]} picture = {Product.host.picture}/>
+      </div>
+      <div className='rate_tag_container'>
+        <Tags content = {tagsProduct} />
+        <Rating rating = {parseInt(Product.rating)}/>
+      </div>
+      <div className="product__dropdowns">
+        <Collapsible title="Description" content={Product.description} />
+        <Collapsible title="Equipements" content={equipementsProduct} />
       </div>
     </div>
   )

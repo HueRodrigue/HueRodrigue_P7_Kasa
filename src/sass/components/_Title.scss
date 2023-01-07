@@ -1,0 +1,15 @@
+.Title{
+    padding-left: 10px;
+    &-product{
+        font-family: $text_police;
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary_color;
+    }
+    .City-product{
+        font-family: $text_police;
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary_color;
+    }
+}

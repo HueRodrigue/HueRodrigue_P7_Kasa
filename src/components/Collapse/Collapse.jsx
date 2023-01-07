@@ -19,13 +19,13 @@ function Collapsible({title,content}) {
         
     };
     return (
-        <div className='about__dropdowns__items'>
-        <button className='about__dropdowns__items--title' onClick={toggle}>
-            <span className='about__dropdowns__items--title--theme'>{title}</span>
-            <span className='about__dropdowns__items--title--arrow'><IoIosArrowDown/></span>
+        <div className='dropdowns__items'>
+        <button className='dropdowns__items--title' onClick={toggle}>
+            <span className='dropdowns__items--title--theme'>{title}</span>
+            <span className='dropdowns__items--title--arrow'><IoIosArrowDown/></span>
         </button>
         {open && (
-        <div className="about__dropdowns__items--description">
+        <div className="dropdowns__items--description">
             {content}
         </div>
         )}

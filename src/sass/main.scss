@@ -4,7 +4,20 @@
 @import "./components/_Banner.scss";
 @import "./components/_Card.scss";
 @import "./components/_Collapse.scss";
+@import "./components/_Host.scss";
 @import "./components/_Slider.scss";
+@import "./components/_Title.scss";
+@import "./components/_Tags.scss";
+@import "./components/_Rating.scss";
 @import "./layouts/_Footer_layout.scss";
 @import "./layouts/_Header_layout.scss";
 @import "./layouts/_Error_layout.scss";
+@import "./layouts/_About_layout.scss";
+@import "./layouts/_Product_layout.scss";
+
+
+#root{
+    /* Taille max du contenu ( version ordinateur ) */
+    max-width: 1400px;
+    margin: auto;
+}

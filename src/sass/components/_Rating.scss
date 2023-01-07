@@ -1,0 +1,22 @@
+.rate-container{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    .Star-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+
+        
+    }
+    .red{
+        color: $primary_color;
+    }
+    .grey{
+        color: $quaternary_color;
+    }
+}
