@@ -26,10 +26,10 @@ function About() {
     <div className="about">
       <Banner image={banner} />
       <div className="about__dropdowns">
-      <Collapsible title="fiabilité" content={content("fiability")} />
-      <Collapsible title="respect" content={content("respect")} />
-      <Collapsible title="service" content={content("service")} />
-      <Collapsible title="sécurité" content={content("sécurity")} />
+      <Collapsible title="Fiabilité" content={content("fiability")} />
+      <Collapsible title="Respect" content={content("respect")} />
+      <Collapsible title="Service" content={content("service")} />
+      <Collapsible title="Sécurité" content={content("sécurity")} />
       </div>
     </div>
   )
