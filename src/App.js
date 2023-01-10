@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 export default function App() {
     return(
         <Routes>
-                <Route exact path="/" element={<Home />}/>
-                <Route path="/product/:id" element={<Product/>}/>
-                <Route path="/about" element={<About />}/>
-                <Route path="*" element={<Error />}/>
+                <Route exact path="/" element={<Home />}></Route>
+                <Route path="/product/:id" element={<Product/>}></Route>
+                <Route path="/about" element={<About />}></Route>
+                <Route path="*" element={<Error />}></Route>
         </Routes>
     )
 }

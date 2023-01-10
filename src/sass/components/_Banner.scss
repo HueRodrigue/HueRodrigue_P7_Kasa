@@ -2,18 +2,56 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    margin: auto;
 
     &--text { 
         position: absolute; 
+        width: 100%;
+        text-align: center;
         font-size: 50px;
         font-family: $text_police;
         color: $secondary_color;
         font-weight: normal;
     }
     &--img{
+        width: 100%;
         border-radius: 25px;
         object-fit: cover;
         filter: brightness(.9);
     }
  }
+
+@media(max-width:912px) {
+    .kasa-banner{
+        width: 100%;
+        
+    }
+}
  
+@media(max-width : 767px) {
+    .kasa-banner{
+        height: 111px;
+        width: 335px;
+        border-radius: 10px;
+        &--text { 
+            position: absolute; 
+            width: 217px;
+            text-align: center;
+            font-size: 24px;
+            font-family: $text_police;
+            color: $secondary_color;
+            font-weight: normal;
+            
+        }
+        &--img{
+            width: 100%;
+            height: 111px;
+            border-radius: 25px;
+            object-fit: cover;
+            filter: brightness(.9);
+            border-radius: 10px;
+        }
+
+    }
+}

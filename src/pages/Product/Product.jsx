@@ -7,6 +7,7 @@ import Title from '../../components/Title/Title.jsx'
 import Rating from '../../components/Rating/Rating.jsx'
 import Tags from '../../components/Tags/Tags.jsx'
 import Collapsible from '../../components/Collapse/Collapse.jsx';
+import Error from '../../pages/Error/Error.jsx'
 
 
 
@@ -16,6 +17,12 @@ function Product() {
  const Product = JsonData.find(logement => logement.id === id.id)
 console.log(Product);
 
+if(typeof Product === 'undefined') {
+  console.log('test');
+  return(
+  <Error/>
+  )
+}
 /* Équipements */
 const equipementsProduct = Product?.equipments.map((equipment, index) => {
   return <li key={index}>{equipment}</li>
@@ -33,13 +40,16 @@ const tagsProduct = Product?.tags.map((tags, index) => {
       <div className='slider-container'>
         <Slider slides={Product.pictures}/>
       </div>
-      <div className='title_profile_container'>
+      <div className='Info-container'>
+      <div className='title_tags_container'>
         <Title title={Product.title} city = {Product.location}/>
-        <Host name = {split_string[0]} username = {split_string[1]} picture = {Product.host.picture}/>
-      </div>
-      <div className='rate_tag_container'>
         <Tags content = {tagsProduct} />
+      </div>
+      
+      <div className='profile_rate_container'>
+        <Host name = {split_string[0]} username = {split_string[1]} picture = {Product.host.picture}/>
         <Rating rating = {parseInt(Product.rating)}/>
+      </div>
       </div>
       <div className="product__dropdowns">
         <Collapsible title="Description" content={Product.description} />

@@ -5,7 +5,16 @@ import { IoIosArrowDropleft, IoIosArrowDropright} from "react-icons/io";
 
 function Slider({slides}){
     const [currentIndex, setCurrentIndex] = useState(0);
-    console.log(slides)
+    console.log(slides.length)
+    var left ='';
+    var right = '';
+    if(slides.length === 1){
+        left = 'left-arrow' + ' hidden'
+        right = 'right-arrow' + ' hidden'
+    }else{
+        left = 'left-arrow'
+        right = 'right-arrow'
+    }
 
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
@@ -58,8 +67,8 @@ function Slider({slides}){
     
     return(
     <div className="slider" style={sliderStyle}>
-        <div className='left-arrow' style={leftArrowStyles} onClick={goToPrevious}>&#10094;</div>
-        <div className='right-arrow' style={rightArrowStyles} onClick={goToNext}>&#10095;</div>
+        <div className={left} style={leftArrowStyles} onClick={goToPrevious}>&#10094;</div>
+        <div className={right} style={rightArrowStyles} onClick={goToNext}>&#10095;</div>
         <div className="slide" style={slideStyle}></div>
     </div>
     )

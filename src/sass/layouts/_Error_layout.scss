@@ -12,6 +12,7 @@
     &--description{
         font-weight: 500;
         font-size: 36px;
+        text-align: center;
         color: $primary_color;
         font-family: $text_police;
     }
@@ -21,5 +22,20 @@
         color: $primary_color;
         font-family: $text_police;
         margin-bottom: 50px;
+    }
+}
+
+@media(max-width:767px){
+    .Error-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .Error-div--title{
+            font-weight: 700;
+            font-size: 96px;
+            color: $primary_color;
+            font-family: $text_police;
+        }
     }
 }
