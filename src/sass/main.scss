@@ -14,10 +14,6 @@
 @import "./layouts/_Error_layout.scss";
 @import "./layouts/_About_layout.scss";
 @import "./layouts/_Product_layout.scss";
+@import "./base/_base.scss";
 
 
-#root{
-    /* Taille max du contenu ( version ordinateur ) */
-    max-width: 1400px;
-    margin: auto;
-}

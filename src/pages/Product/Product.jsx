@@ -12,27 +12,31 @@ import Error from '../../pages/Error/Error.jsx'
 
 
 function Product() {
- /* Récupère la bonne fiche */
+ /* Récupèration de l'id via l'url */
  const id = useParams();
+ // Stockage de l'id dans la constante product
  const Product = JsonData.find(logement => logement.id === id.id)
 console.log(Product);
 
+// Si aucun produit n'a été trouvé, on renvoie la page erreur
 if(typeof Product === 'undefined') {
   console.log('test');
   return(
   <Error/>
   )
 }
-/* Équipements */
+
+/* Mappage des équipements sous forme de liste  */
 const equipementsProduct = Product?.equipments.map((equipment, index) => {
   return <li key={index}>{equipment}</li>
 })
 
+// Mappage des Tags sous formes de liste
 const tagsProduct = Product?.tags.map((tags, index) => {
   return <li className='tags-item' key={index}>{tags}</li>
 })
 
-
+// Séparation du nom et du prénom de l'host
  const split_string = Product.host.name.split(" ");
 
   return (

@@ -6,7 +6,7 @@ import Collapsible from '../../components/Collapse/Collapse.jsx';
 
 function About() {
 
-  // Switch to display content in the dropdown by title
+  // Switch pour connaitre le contenu des collapses
   const content = (title) => {
     switch (title) {
       case "fiability":
@@ -23,6 +23,7 @@ function About() {
     }
   };
   return (
+    // Mise en place des collapses
     <div className="about">
       <Banner image={banner} />
       <div className="about__dropdowns">

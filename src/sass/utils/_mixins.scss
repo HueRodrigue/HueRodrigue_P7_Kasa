@@ -1,0 +1,10 @@
+@mixin default_text_style{
+    font-weight: $text_weight;
+    font-size: $text_size; 
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

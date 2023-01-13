@@ -1,11 +1,9 @@
 .Profile{
-    display: flex;
-    align-items: center;
+    @include center;
     
     &-text p {
-        font-family: $text_police;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: $text_weight;
         color: $primary_color;
     }
     &-picture , img{

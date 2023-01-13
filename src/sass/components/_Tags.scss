@@ -1,5 +1,5 @@
 .tags-container{
- display: flex;
+ @extend .flex;
  flex-wrap: wrap;
  .tags-item{
     list-style: none;
@@ -11,7 +11,7 @@
     height: 25px;
     font-family: $text_police;
     border-radius: 25px;
-    font-weight: 500;
+    font-weight: $text_weight;
     font-size: 14px;
     background-color: $primary_color;
     color: $secondary_color;

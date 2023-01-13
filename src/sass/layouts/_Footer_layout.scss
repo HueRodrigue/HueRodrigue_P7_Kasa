@@ -1,12 +1,10 @@
 footer{
+    @include center;
     background-color: $tertiary_color;
-    display: flex;
-    flex-direction: column;
+    @extend .column;
     justify-content: space-around;
-    align-items: center;
     p{
         color: $secondary_color;
-        font-family: $text_police;
     }
     figure{
         padding-top: 20px;

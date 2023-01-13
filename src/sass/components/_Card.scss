@@ -2,7 +2,7 @@
     background-color: lightgray;
     border-radius: 25px;
     margin: 50px;
-    display: flex;
+    @extend .flex;
     flex-wrap: wrap;
     .clickable-card {
         margin: auto;
@@ -26,10 +26,9 @@
         .card-title {
             width: 200px;
             position: absolute;
-            font-family: $text_police;
             font-size: 18px;
-            font-weight: 500;
-            color: #f6f6f6;
+            font-weight: $text_weight;
+            color: $quaternary_color;
             z-index: 1;
             bottom: 25px;
             margin-left: 10px;
@@ -47,36 +46,11 @@
     margin: auto;
     background-color:white;
         .clickable-card {
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            margin-top: 20px;
-        margin-bottom: 20px;
-        width: 100%;
-            
+            width: 100%;
             .card-img
             {
                 width: 340px;
                 height: 340px;
-                object-fit: cover;
-                border-radius: 10px;
-            }
-    
-            .card-title {
-                width: 200px;
-                position: absolute;
-                font-family: $text_police;
-                font-size: 18px;
-                font-weight: 500;
-                color: #f6f6f6;
-                z-index: 1;
-                bottom: 25px;
-                margin-left: 10px;
-            }
-            
-            .card-overlay{
-                box-shadow: -1px -81px 84px -37px rgba(0, 0, 0, 1);
-                z-index: 3;
             }
         }
     }

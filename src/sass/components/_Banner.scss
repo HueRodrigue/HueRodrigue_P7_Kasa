@@ -1,7 +1,6 @@
 .kasa-banner{ 
-    display: flex;
+    @include center;
     justify-content: center;
-    align-items: center;
     width: 90%;
     margin: auto;
 
@@ -10,9 +9,8 @@
         width: 100%;
         text-align: center;
         font-size: 50px;
-        font-family: $text_police;
         color: $secondary_color;
-        font-weight: normal;
+        font-weight: $text_weight;
     }
     &--img{
         width: 100%;
@@ -35,14 +33,9 @@
         width: 335px;
         border-radius: 10px;
         &--text { 
-            position: absolute; 
+            @include default_text_style;
             width: 217px;
-            text-align: center;
-            font-size: 24px;
-            font-family: $text_police;
             color: $secondary_color;
-            font-weight: normal;
-            
         }
         &--img{
             width: 100%;

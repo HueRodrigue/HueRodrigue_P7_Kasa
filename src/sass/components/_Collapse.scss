@@ -1,18 +1,15 @@
 .dropdowns__items{
-    display: flex;
-    flex-direction: column;
+    @extend .flex;
+    @extend .column;
     width: 70%;
     margin: 20px;
     
     &--title{
-        display: flex;
+        @include center;
+        @include default_text_style;
         justify-content: space-between;
-        align-items: center;
         background-color: $primary_color;
-        font-family: $text_police;
-        font-size: 24px;
-        font-weight: 500;
-        color: #f6f6f6;
+        color:$quaternary_color;
         border:none;
         padding-left: 10px;
         padding-right: 10px;
@@ -24,8 +21,7 @@
         border-radius: 5px;
         padding-left: 10px;
         padding-right: 10px;
-        font-family: $text_police;
-        font-size: 24px;
+        font-size: $text_size;
         font-weight: 400;
         color: $primary_color;
         list-style: none; 
