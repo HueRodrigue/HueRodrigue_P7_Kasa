@@ -20,14 +20,13 @@ console.log(Product);
 
 // Si aucun produit n'a été trouvé, on renvoie la page erreur
 if(typeof Product === 'undefined') {
-  console.log('test');
   return(
   <Error/>
   )
 }
 
 /* Mappage des équipements sous forme de liste  */
-const equipementsProduct = Product?.equipments.map((equipment, index) => {
+let equipementsProduct = Product?.equipments.map((equipment, index) => {
   return <li key={index}>{equipment}</li>
 })
 
